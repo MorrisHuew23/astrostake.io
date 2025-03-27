@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroStake- Automatic Cryptocurrency Staking</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - SF Pro Text (аналог) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="text-primary fw-bold">Astro</span><span class="stake-text fw-bold text-black">Stake</span>
+                <i class="fas fa-rocket ms-2 text-primary"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-black nav-hover-effect active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-black nav-hover-effect" href="#features">Possibilities</a></li>
+                    <li class="nav-item"><a class="nav-link text-black nav-hover-effect" href="#how-it-works">How does this work</a></li>
+                    <li class="nav-item"><a class="nav-link text-black nav-hover-effect" href="#pricing">Profitability</a></li>
+                    <li class="nav-item"><a class="nav-link text-black nav-hover-effect" href="#contact">Contacts</a></li>
+                </ul>
+                <a href="#start" class="btn btn-primary ms-lg-3">Start now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="display-4 fw-bold mb-4">Passive <span class="text-brand">income</span> on crypto - without complications</h1>
+                    <p class="lead mb-4">Just deposit coins and AstroStake will automatically stake them at the best interest rate</p>
+                    <div class="d-flex gap-3">
+                        <a href="#start" class="btn btn-primary btn-lg px-4">Get started in 2 minutes</a>
+                        <a href="#how-it-works" class="btn btn-outline-light btn-lg px-4">How does this work?</a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image mt-5 mt-lg-0">
+                        <img src="CPdashboard1.png" alt="AstroStake Dashboard" class="img-fluid rounded-4 shadow">
+                        <div class="floating-coins">
+                            <div class="coin coin-1"><i class="fab fa-bitcoin"></i></div>
+                            <div class="coin coin-2"><i class="fab fa-ethereum"></i></div>
+                            <div class="coin coin-3"><i class="fas fa-coins"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Why Choose AstroStake</h2>
+                <p class="text-muted">Automated solution for passive income</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary-light mb-4">
+                                <i class="fas fa-robot text-primary"></i>
+                            </div>
+                            <h5 class="fw-bold">Auto-rebalancing</h5>
+                            <p class="text-muted">The algorithm automatically transfers funds to the most profitable pools</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary-light mb-4">
+                                <i class="fas fa-shield-alt text-primary"></i>
+                            </div>
+                            <h5 class="fw-bold">Safety</h5>
+                            <p class="text-muted">Only verified protocols with audit and insurance fund</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary-light mb-4">
+                                <i class="fas fa-chart-line text-primary"></i>
+                            </div>
+                            <h5 class="fw-bold">Maximum APY</h5>
+                            <p class="text-muted">The yield is higher than with independent staking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Добавьте этот код между секциями -->
+    <section class="profit-ticker py-3 bg-light" id="profit-ticker">
+        <div class="container">
+        <div class="ticker-container overflow-hidden">
+            <div class="ticker-track d-flex align-items-center">
+                <div class="ticker-item"><span class="profit-amount">+$237.24</span> <span class="profit-email">by n....gi@mail.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$184.56</span> <span class="profit-email">by a....xo@gmail.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$312.89</span> <span class="profit-email">by k....qt@yahoo.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$275.43</span> <span class="profit-email">by m....lp@proton.me</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$198.76</span> <span class="profit-email">by s....vr@outlook.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$356.21</span> <span class="profit-email">by p....kw@icloud.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$421.33</span> <span class="profit-email">by d....yz@gmail.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$267.98</span> <span class="profit-email">by t....fg@yahoo.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$389.12</span> <span class="profit-email">by l....mn@proton.me</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$154.67</span> <span class="profit-email">by w....ab@outlook.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$298.45</span> <span class="profit-email">by e....cd@icloud.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$342.76</span> <span class="profit-email">by r....ef@gmail.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$203.89</span> <span class="profit-email">by y....gh@yahoo.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$376.54</span> <span class="profit-email">by u....ij@proton.me</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$289.32</span> <span class="profit-email">by o....kl@outlook.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$412.65</span> <span class="profit-email">by i....mn@icloud.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$167.98</span> <span class="profit-email">by q....op@gmail.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$324.87</span> <span class="profit-email">by j....qr@yahoo.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$245.76</span> <span class="profit-email">by z....st@proton.me</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$398.23</span> <span class="profit-email">by x....uv@outlook.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$276.54</span> <span class="profit-email">by v....wx@icloud.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$187.65</span> <span class="profit-email">by b....yz@gmail.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$356.78</span> <span class="profit-email">by n....ab@yahoo.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$298.99</span> <span class="profit-email">by m....cd@proton.me</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$412.34</span> <span class="profit-email">by l....ef@outlook.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$234.56</span> <span class="profit-email">by k....gh@icloud.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$378.90</span> <span class="profit-email">by j....ij@gmail.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$267.89</span> <span class="profit-email">by h....kl@yahoo.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$345.67</span> <span class="profit-email">by g....mn@proton.me</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$198.76</span> <span class="profit-email">by f....op@outlook.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$423.45</span> <span class="profit-email">by d....qr@icloud.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$312.34</span> <span class="profit-email">by s....st@gmail.com</span></div>
+                <div class="ticker-item"><span class="profit-amount">+$256.78</span> <span class="profit-email">by p....uv@yahoo.com</span></div>
+              </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">How does it work</h2>
+                <p class="text-muted">Just 3 easy steps to passive income</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-card">
+                        <div class="step-number bg-primary">1</div>
+                        <h4 class="fw-bold mt-3">Deposit funds</h4>
+                        <p class="text-muted">Select cryptocurrency (USDT, ETH, SOL and others) and deposit amount</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-card">
+                        <div class="step-number bg-primary">2</div>
+                        <h4 class="fw-bold mt-3">Automatic distribution</h4>
+                        <p class="text-muted">Our algorithm selects optimal pools for maximum profitability</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-card">
+                        <div class="step-number bg-primary">3</div>
+                        <h4 class="fw-bold mt-3">Make a profit</h4>
+                        <p class="text-muted">Daily accruals directly to your wallet</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- APY Calculator Section -->
+    <section id="pricing" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="fw-bold mb-4">Calculate your potential profitability</h2>
+                    <p class="text-muted mb-4">Find out how much you can earn with AstroStake</p>
+                    <div class="calculator-card p-4 rounded-4 shadow-sm bg-white">
+                        <div class="mb-4">
+                            <label for="amount" class="form-label fw-bold">Investment amount ($)</label>
+                            <input type="range" class="form-range" id="amount" min="100" max="10000" value="500" step="50">
+                            <div class="d-flex justify-content-between">
+                                <span>$100</span>
+                                <span id="amountValue">$500</span>
+                                <span>$10,000</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="coin" class="form-label fw-bold">Cryptocurrency</label>
+                            <select class="form-select" id="coin">
+                                <option value="usdt">USDT (8%)</option>
+                                <option value="eth">ETH (4.5%)</option>
+                                <option value="sol">SOL (6%)</option>
+                            </select>
+                        </div>
+                        <div class="result-box p-3 rounded-3 bg-primary-light">
+                            <h5 class="fw-bold">Your annual profit:</h5>
+                            <h3 class="text-primary fw-bold" id="result">$400</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="table-responsive mt-5 mt-lg-0">
+                        <table class="table table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Coin</th>
+                                    <th>Current APY</th>
+                                    <th>Minimum deposit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="fab fa-bitcoin me-2"></i> BTC</td>
+                                    <td>3.2%</td>
+                                    <td>0.01 BTC</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fab fa-ethereum me-2"></i> ETH</td>
+                                    <td>4.5%</td>
+                                    <td>0.1 ETH</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-dollar-sign me-2"></i> USDT</td>
+                                    <td>8%</td>
+                                    <td>$50</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fab fa-solana me-2"></i> SOL</td>
+                                    <td>6%</td>
+                                    <td>5 SOL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="alert alert-primary mt-4">
+                        <i class="fas fa-info-circle me-2"></i> Profitability is updated daily. Average profitability for the last month: <strong>5.8%</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="start" class="py-5 bg-primary text-white">
+        <div class="container text-center" data-aos="zoom-in">
+            <h2 class="fw-bold mb-4">Ready to start making money?</h2>
+            <p class="lead mb-5">Join AstroStake today and get <span class="fw-bold">30 days without commissions</span></p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="login.html" class="btn btn-outline-light btn-lg px-4">Log In</a>
+                <a href="register.html" class="btn btn-outline-light btn-lg px-4">Sign Up</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-4"><span class="text-primary">Astro</span>Stake</h5>
+                    <p class="text-muted">Automated cryptocurrency staking service for passive income.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-medium"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-4">Navigation</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted">Home</a></li>
+                        <li class="mb-2"><a href="#features" class="text-muted">Possibilities</a></li>
+                        <li class="mb-2"><a href="#how-it-works" class="text-muted">How does this work</a></li>
+                        <li class="mb-2"><a href="#pricing" class="text-muted">Profitability</a></li>
+                        <li><a href="#contact" class="text-muted">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-4">Resources</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">Documentation</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">FAQ</a></li>
+                        <li><a href="#" class="text-muted">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4" id="contact">
+                    <h6 class="fw-bold mb-4">Contact us</h6>
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control bg-dark border-secondary" placeholder="Your email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control bg-dark border-secondary" rows="3" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-muted mb-0">© 2025 AstroStake. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-muted mb-0">
+                        <a href="#" class="text-muted">Privacy Policy</a> | 
+                        <a href="#" class="text-muted">Terms of Use</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary btn-lg back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

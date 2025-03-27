@@ -1,0 +1,555 @@
+:root {
+    --primary: #3b82f6;
+    --primary-light: rgba(59, 130, 246, 0.1);
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --gray: #64748b;
+    --success: #10b981;
+}
+
+/* Base Styles */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #f8fafc; /* Основной цвет фона */
+  background-image: 
+    /* Горизонтальные пунктирные линии */
+    linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+    linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+    linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+    /* Вертикальные пунктирные линии */
+    linear-gradient(to bottom, #e2e8f0 1px, transparent 1px),
+    linear-gradient(to bottom, #e2e8f0 1px, transparent 1px),
+    linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+  background-size: 
+    40px 100%,  /* Густые горизонтальные */
+    80px 100%,  /* Средние горизонтальные */
+    160px 100%, /* Редкие горизонтальные */
+    100% 40px,  /* Густые вертикальные */
+    100% 80px,  /* Средние вертикальные */
+    100% 160px; /* Редкие вертикальные */
+  background-position: 
+    0 0, 0 0, 0 0, 
+    0 0, 0 0, 0 0;
+  opacity: 0.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+footer, 
+footer .text-muted,
+footer a:not(.btn) {
+    color: white !important;
+}
+
+footer a:not(.btn):hover {
+    color: var(--primary) !important;
+    opacity: 0.9;
+}
+
+/* Только placeholder */
+.form-control.bg-dark::placeholder {
+    color: #ccc !important;
+}
+
+/* Для всех текстовых полей в футере */
+footer .form-control {
+    color: white !important;
+}
+
+/* Для плейсхолдеров */
+footer .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Для состояния фокуса */
+footer .form-control:focus {
+    color: white !important;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+}
+
+.text-brand {
+    color: #3b82f6;
+}
+
+.display-4 {
+    font-weight: 800;
+}
+
+.lead {
+    font-weight: 400;
+}
+
+/* Базовый стиль */
+.stake-text {
+    transition: color 0.3s ease;
+  }
+  
+  /* Стиль при прокрутке */
+  .scrolled .stake-text {
+    color: #000 !important;
+}
+
+/* Navigation */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 1) !important;
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 8rem 0 6rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.floating-coins {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.coin {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.coin-1 {
+    top: -20px;
+    left: 50px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.coin-2 {
+    top: 80%;
+    right: 30px;
+    animation: float 5s ease-in-out infinite 1s;
+}
+
+.coin-3 {
+    top: 40%;
+    right: -20px;
+    animation: float 7s ease-in-out infinite 0.5s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Features */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.icon-box i {
+    font-size: 1.5rem;
+}
+
+/* Steps */
+.step-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto;
+    color: white;
+}
+
+/* Calculator */
+.calculator-card {
+    background-color: white;
+}
+
+/* Эффект при наведении */
+.nav-hover-effect {
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+  
+.nav-hover-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(152, 180, 236, 0.5); /* Светло-серый с прозрачностью */
+    border-radius: 0.5rem; /* Закругленные углы */
+    z-index: -1;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: all 0.3s ease;
+}
+  
+.nav-hover-effect:hover {
+    color: #3b82f6 !important; /* Синий текст при наведении */
+}
+  
+.nav-hover-effect:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.result-box {
+    border-left: 4px solid var(--primary);
+}
+
+/* Table */
+.table {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table th {
+    font-weight: 600;
+}
+
+/* CTA */
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+/* Footer */
+.bg-dark {
+    background-color: var(--dark) !important;
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary) !important;
+}
+
+/* Back to Top */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 6rem 0 4rem;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 5rem 0 3rem;
+    }
+    
+    .hero-image {
+        margin-top: 2rem;
+    }
+    
+    .floating-coins {
+        display: none;
+    }
+    
+    .d-flex.gap-3 {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* CSS анимации */
+.profit-ticker {
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .profit-ticker.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .ticker-container {
+    position: relative;
+    height: 30px;
+    overflow: hidden;
+  }
+  
+.ticker-track {
+    position: absolute;
+    display: flex;
+    animation: ticker-scroll 180s linear infinite;
+    white-space: nowrap;
+  }
+  
+  .ticker-item {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 40px;
+    font-size: 15px;
+  }
+  
+  .profit-amount {
+    color: #10b981;
+    font-weight: 600;
+    margin-right: 5px;
+  }
+  
+  .profit-email {
+    color: #64748b;
+    opacity: 0.8;
+  }
+  
+  @keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Изменяем цвет иконки гамбургера */
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%233b82f6' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  /* Изменяем цвет рамки кнопки */
+  .navbar-dark .navbar-toggler {
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+  
+  /* Изменяем цвет при наведении */
+  .navbar-dark .navbar-toggler:hover {
+    border-color: rgba(59, 130, 246, 0.8);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Auth Pages */
+.auth-page {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-card {
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+/* Анимация кнопок */
+.auth-btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+}
+
+.auth-btn:hover::after {
+    left: 100%;
+}
+
+.auth-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.auth-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Летающие монеты на auth-страницах */
+.auth-page .floating-coins {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.auth-page .coin {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.auth-page .coin-1 {
+    top: 20%;
+    left: 10%;
+    animation: float 15s ease-in-out infinite;
+}
+.auth-page .coin-2 {
+    top: 60%;
+    left: 80%;
+    animation: float 12s ease-in-out infinite 2s;
+}
+.auth-page .coin-3 {
+    top: 30%;
+    left: 70%;
+    animation: float 18s ease-in-out infinite 1s;
+}
+.auth-page .coin-4 {
+    top: 70%;
+    left: 20%;
+    animation: float 14s ease-in-out infinite 3s;
+}
+.auth-page .coin-5 {
+    top: 10%;
+    left: 50%;
+    animation: float 16s ease-in-out infinite 0.5s;
+}
+
+.auth-card .form-control {
+    border: none;
+    border-bottom: 2px solid #ddd;
+    border-radius: 0;
+    padding-left: 0;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.auth-card .form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary);
+}
+
+.auth-card .form-label {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.auth-card .mb-3.focused .form-label {
+    transform: translateY(-20px);
+    font-size: 0.8rem;
+    color: var(--primary);
+}
